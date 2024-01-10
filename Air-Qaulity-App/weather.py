@@ -8,7 +8,7 @@ import json
 root = Tk()
 root.title("Weather App")
 #root.iconbitmap('')
-root.geometry('400x400')
+root.geometry('500x100')
 
 try:
     api_request = rq.get(f"https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=02302&distance=5&API_KEY=51EF9F29-ED44-4A44-AF62-86B538033B1E") 
@@ -25,8 +25,8 @@ try:
 except Exception as e:
     api = "Error..."
 
-myLabel = Label(root, text= f"City: {city} state:{state} latitute:{latitude} longitute:{longitude} air quality:{aqi} category: {category}")
+myLabel = Label(root, text= f"City: {city}, State:{state} \nLatitute:{latitude}, Longitute:{longitude} \nAir Quality:{aqi}, Category: {category}",
+                font=("TimeNewRoman", 20))
 myLabel.pack()
 
 root.mainloop()
-#https://www.airnowapi.org/aq/observation/zipCode/current/?format=text/csv&zipCode=02302&distance=25&API_KEY=51EF9F29-ED44-4A44-AF62-86B538033B1E
