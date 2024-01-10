@@ -3,7 +3,6 @@ from PIL import Image
 from PIL import ImageTk as ITK
 import requests as rq
 import json
- 
 
 root = Tk()
 root.title("Weather App")
